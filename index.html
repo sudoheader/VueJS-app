@@ -11,14 +11,15 @@
 <body>
 	<div id="app">
 		<input type="text" v-on:input="changeTitle">
-		<p>{{ sayHello() }}</p>
+		<p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
 	</div>
 	<div>
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-				  title: 'Hello World!'
+				  title: 'Hello World!',
+				  link: 'http://google.com'
 			  },
 			  methods: {
 				  sayHello: function() {
