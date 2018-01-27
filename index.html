@@ -5,26 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>VueJS</title>
-	<link rel="stylesheet" href="styles.css">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
 	<script src="vue.js"></script>
 </head>
 <body>
 	<div id="app">
-		<p v-if="show">You can see me! <span>Hello!</span></p>
-		<p v-else>Now you see me!</p>
-		<template v-if="show">
-			<h1>Heading</h1>
-			<p>Inside a template</p>
-		</template>	
-		<p v-show="show">Do you also see me?</>
-		<button @click="show = !show">Switch</button>
+		<ul>
+			<li v-for="ingredient in ingredients">{{ ingredient }}</li>
+		</ul>
 	</div>
 	<div>
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					show: true
+					ingredients: ['meat', 'fruit', 'cookies'],
+					persons: [
+						{name: 'Max', age: 27, color: 'red'},
+						{name: 'Anna', age: 'unknown', color: 'blue'}
+					]
 				}
 			});
 		</script>
