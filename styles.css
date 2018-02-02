@@ -1,3 +1,25 @@
 body {
     color: black;
 }
+a {
+    color: #42b983;
+}
+a.button {
+    padding: 0.75em 2em;
+    border-radius: 2em;
+    display: inline-block;
+    color: #fff;
+    background-color: #4fc08d;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+    border: 1px solid #4fc08d;
+}
+a.button.white {
+    background-color: #fff;
+    color: #42b983;
+}
+a.button.gray {
+    background-color: #f6f6f6;
+    color: #7f8c8d;
+    border-color: #f6f6f6;
+}
